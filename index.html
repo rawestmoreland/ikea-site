@@ -1141,9 +1141,24 @@
           </div>
         </div>
 
-        <form class="contact-form" netlify>
+        <form
+          class="contact-form"
+          netlify-honeypot="bot-field"
+          data-netlify="true"
+        >
           <div class="form-row">
             <div class="form-group">
+              <p class="hidden">
+                <label>
+                  Don’t fill this out if you’re human:
+                  <input
+                    aria-label="Bot"
+                    name="bot-field"
+                    type="text"
+                    autocomplete="off"
+                  />
+                </label>
+              </p>
               <label for="name">Your name</label>
               <input
                 type="text"
