@@ -737,6 +737,55 @@
         border-top: 1px solid var(--border);
       }
 
+      /* ABOUT / HEADSHOT */
+      .about-grid {
+        display: grid;
+        grid-template-columns: 320px 1fr;
+        gap: 5rem;
+        align-items: center;
+      }
+
+      .headshot-wrap {
+        position: relative;
+      }
+
+      .headshot-img {
+        width: 100%;
+        aspect-ratio: 3 / 4;
+        object-fit: cover;
+        object-position: top;
+        border-radius: 16px;
+        display: block;
+      }
+
+      .headshot-placeholder {
+        width: 100%;
+        aspect-ratio: 3 / 4;
+        border-radius: 16px;
+        background: var(--accent-light);
+        border: 2px dashed var(--accent-mid);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        color: var(--accent);
+        font-size: 0.875rem;
+        font-weight: 500;
+      }
+
+      .headshot-placeholder-icon {
+        font-size: 3.5rem;
+        opacity: 0.5;
+      }
+
+      .about-bio {
+        font-size: 1.05rem;
+        color: var(--muted);
+        font-weight: 300;
+        line-height: 1.85;
+      }
+
       /* RESPONSIVE */
       @media (max-width: 768px) {
         .hero-decoration {
@@ -749,6 +798,11 @@
         .form-row {
           grid-template-columns: 1fr;
         }
+        .about-grid {
+          grid-template-columns: 1fr;
+          gap: 2.5rem;
+        }
+
         .why-grid {
           grid-template-columns: 1fr;
         }
@@ -792,6 +846,7 @@
         <li><a href="#services">Services</a></li>
         <li><a href="#pricing">Pricing</a></li>
         <li><a href="#how">How it works</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#contact" class="nav-cta">Get a quote</a></li>
       </ul>
     </nav>
@@ -950,6 +1005,32 @@
       </div>
     </div>
 
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="about-grid">
+        <div class="headshot-wrap">
+          <img
+            src="/images/53D3551D-5B2F-435C-8101-FA1B907BFFAC_1_105_c.jpeg"
+            alt="Your name"
+            class="headshot-img"
+          />
+        </div>
+        <div>
+          <div class="section-label">About me</div>
+          <h2>A face behind<br /><em>the service</em></h2>
+          <p class="section-lead">
+            Hi, I'm [your name] — a Zurich-based IKEA assembly specialist who
+            takes pride in doing the job properly, every time.
+          </p>
+          <p class="about-bio">
+            No franchise overhead, no strangers from a platform. When you book
+            me, you get a single, reliable person who shows up on time, brings
+            all the tools, and leaves your home tidy.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <!-- PRICING -->
     <section id="pricing">
       <div class="section-label">Transparent pricing</div>
@@ -1071,7 +1152,8 @@
           <div>
             <h4>Clean workspace</h4>
             <p>
-              I flatten all packaging and tidy up after assembly, leaving your space neat.
+              I flatten all packaging and tidy up after assembly, leaving your
+              space neat.
             </p>
           </div>
         </div>
